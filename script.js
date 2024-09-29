@@ -5,5 +5,13 @@ function calculation() {
     var years = todaydate.getFullYear - setdate.getFullYear;
     var months = todaydate.getMonth - setdate.getMonth;
     var days = todaydate.getDay - setdate.getDay;
-    
+     
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+    if (days < 0) {
+        months--;
+        days += 31;
+    }
 }
